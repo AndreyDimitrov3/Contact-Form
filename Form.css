@@ -1,0 +1,279 @@
+* {
+  box-sizing: border-box;
+  font-family: "Karla";
+}
+
+body {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: #e0f1e7;
+  height: 100vh;
+  margin: 0;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 14px;
+  padding: 35px;
+  width: 70%;
+  margin-top: 85px;
+  margin-bottom: 85px;
+}
+
+.heading {
+  margin: 0 0 20px 0;
+}
+
+.label{
+  font-size: 16px;
+  font-weight: 400;
+}
+
+input{
+  border: 1px solid black;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 16px;
+  width: 100%;
+}
+
+input:focus{
+  outline: none !important;
+  border-color: green;
+}
+
+.name-holder {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.fname, .lname {
+  margin-top: 6px;
+  width: 100%;
+  display: block;
+}
+
+.email-name{
+  margin-bottom: 6px;
+}
+
+.query-label{
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.radio-container{
+  display: flex;
+  gap: 20px;
+}
+
+.radio-holder{
+    display: inline-flex;
+    border-radius: 8px;
+    border: 1px solid black;
+    align-items: center;
+    cursor: pointer;
+    flex-grow: 1;
+}
+
+.radio {
+    cursor: pointer;
+}
+
+.radio-text{
+    cursor: pointer;
+    padding: 8px;
+}
+
+.asterisk {
+  color: #0c7d69;
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 24px;
+}
+
+.rad,
+.ckb{
+  cursor: pointer;
+  padding: 10px 20px;
+  width: 100%;
+}
+
+.rad > input,
+.ckb > input{ /* HIDE ORG RADIO & CHECKBOX */
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* RADIO & CHECKBOX STYLES */
+/* DEFAULT <i> STYLE */
+.rad > i,
+.ckb > i{ 
+  display: inline-block;
+  vertical-align: middle;
+  height: 16px;
+  transition: 0.2s;
+  box-shadow: inset 0 0 0 8px #fff;
+  border: 1px solid gray;
+  background: gray;
+  border-width: 1px; 
+  border-color: #0c7d69;
+}
+
+.rad > i {
+  width:  16px;
+  border-radius: 50%;
+}
+
+.ckb > i {
+  width: 25px;
+  border-radius: 3px;
+}
+
+.rad:hover > i{ /* HOVER <i> STYLE */
+  box-shadow: inset 0 0 0 3px #fff;
+  background: gray;
+}
+
+.rad > input:checked + i{ /* (RADIO CHECKED) <i> STYLE */
+  box-shadow: inset 0 0 0 3px #fff;
+  background: #0c7d69;
+}
+/* CHECKBOX */
+.ckb > input + i::after{
+  content: "";
+  display: block;
+  height: 12px;
+  width:  12px;
+  margin: 2px;
+  border-radius: inherit;
+  transition: inherit;
+  background: gray;
+}
+
+
+.ckb > input:checked + i::after{ /* (RADIO CHECKED) <i> STYLE */
+  margin-left: 11px;
+}
+
+.message-holder{
+  margin-bottom: 22px;
+}
+
+.textarea{
+  width: 100%;
+  height: 80px;
+  font-size: 16px;
+  resize: none;
+  border-radius: 8px;
+  padding: 7px 10px;
+  margin: 4px 0 0 0
+}
+
+.consent-label{
+  cursor: pointer;
+}
+
+.checkbox-holder{
+  display: flex;
+  gap: 10px;
+}
+
+.checkbox{
+  display: inline;
+  cursor: pointer;
+  height: 14px;
+  width: 14px;
+  accent-color: #0C7D69;
+}
+
+.button{
+  color: white;
+  background-color: #0c7d69;
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 1.2px;
+  border: 0;
+  border-radius: 8px;
+  width: 100%;
+  height: 50px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.aside{
+  position: absolute;
+  top: 16px;
+  padding: 5px 15px;
+  border-radius: 12px;
+  color: white;
+  background-color: hsl(187, 24%, 22%);
+}
+
+.message-x{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.message-sent{
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 700;
+  margin-bottom: 0;
+}
+
+.x-button{
+  display: inline;
+  color: white;
+  border: 1px solid white;
+  padding: 0px 5px;
+  margin-top: 16px;
+  background:none;
+  cursor: pointer;
+}
+
+.thanks{
+  font-weight: 300;
+}
+
+.hidden {
+  display: none;
+  margin: 6px 0 0 0;
+}
+
+.empty{
+  color: hsl(0, 66%, 56%);
+  margin-bottom: 0px;
+}
+
+@media (max-width: 730px){
+  .form{
+    width: 85%;
+    margin-top: 50px;
+  }
+}
+
+@media (max-width: 530px){
+  .form{
+    width: 92%;
+  }
+
+  .aside{
+    width: 80%;
+  }
+
+  .radio-container{
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="Form.css" />
+    <title>Contact form</title>
+  </head>
+  <body>
+
+    <aside class="aside hidden" id="aside">
+      <div class="message-x">
+        <p class="message-sent"><img src="assets/images/icon-success-check.svg" alt="Success">Message Sent!</p> 
+        <button class="x-button" id="x">X</button>
+      </div>
+      <p class="thanks">Thanks for completing the form. We'll be in touch soon!</p>
+    </aside>
+
+
+    <form class="form">
+      <h1 class="heading">Contact Us</h1>
+
+      <div class="name-holder">
+        <div class="fname validation-parent">
+          <label for="fname" class="label"> First Name <span class="asterisk">*</span> </label>
+          <input type="text" id="fname" name="fname" class="input fname text-input" maxlength="64" />
+          <p class="hidden empty validation" id="fnameRequired">This field is required</p>
+        </div>
+
+        <div class="lname validation-parent">
+          <label for="lname" class="label"> Last Name <span class="asterisk">*</span> </label>
+          <input type="text" id="lname" name="lname" class="lname input text-input" maxlength="64" />
+          <p class="hidden empty validation" id="lnameRequired">This field is required</p>
+        </div>
+      </div>
+
+      <div class="validation-parent">
+        <label for="email" class="label email-name">Email Address <span class="asterisk">*</span></label> <br>
+        <input type="text" name="email" id="email" class="input email text-input" maxlength="64">
+          <p class="hidden empty validation" id="validEmail">Please enter a valid email address</p>
+      </div>
+
+      <div class="container validation-parent">
+        <p class="label query-label">Query Type <span class="asterisk">*</span>
+
+        <div class="radio-container">
+          <div class="radio-holder">
+            <label class="rad">
+            <input type="radio" name="rad1" value="a" id="general" checked>
+            <i></i> General Enquiry
+            </label>
+          </div>
+
+          <div class="radio-holder validation-parent">
+            <label class="rad">
+              <input type="radio" name="rad1" value="b" id="support">
+              <i></i> Support Request
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <div class="message-holder validation-parent">
+        <label for="textarea" class="message">Message <span class="asterisk">*</span></label>
+        <textarea name="textarea" id="textarea" class="textarea text-input"></textarea>
+        <p class="hidden empty validation" id="messageEmpty">This field is required</p>
+      </div> 
+
+      <div>
+        <div class="checkbox-holder validation-parent">
+          <input type="checkbox" name="contact" id="checkbox" class="checkbox">
+          <label for="checkbox" class="consent-label"> I consent to being contacted by the team</label>
+        </div>
+        <p class="hidden empty validation" id="checkboxEmpty">To submit this form, please consent to being contacted</p>
+      </div>
+
+      <button type="button" class="button" id="button">Submit</button>
+    </form>
+
+    <script src="Form.js"></script>
+  </body>
+</html>
