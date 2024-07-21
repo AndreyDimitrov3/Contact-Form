@@ -5,8 +5,9 @@
 
 body {
   display: flex;
-  align-items: center;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background-color: #e0f1e7;
   height: 100vh;
   margin: 0;
@@ -19,8 +20,6 @@ body {
   border-radius: 14px;
   padding: 35px;
   width: 70%;
-  margin-top: 85px;
-  margin-bottom: 85px;
 }
 
 .heading {
@@ -255,6 +254,19 @@ input:focus{
 .empty{
   color: hsl(0, 66%, 56%);
   margin-bottom: 0px;
+}
+
+@media (max-height: 650px){
+  body{
+    justify-content: normal;
+    height: auto;
+  }
+
+  .form{
+    margin-top: 40px;
+    margin-bottom: 30px;
+  }
+    
 }
 
 @media (max-width: 730px){
